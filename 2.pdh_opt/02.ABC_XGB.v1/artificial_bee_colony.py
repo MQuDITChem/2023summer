@@ -146,14 +146,14 @@ class ABC:
     def run(self, max_iter):
         self.init_pop()
         self.set_best_sol()
-        fits = []
+        logs = []
         for i in range(0, max_iter):
             self.work_emp_bees()
             self.work_olk_bees()
             self.work_sct_bees()
             self.set_best_sol()
             print(i, self.best_fit)
-            fits.append(self.best_fit)
-        fits = numpy.array(fits)
+            logs.append(self.best_fit)
+        logs = numpy.array(logs)
 
-        return self.best_sol, self.best_fit, fits
+        return self.best_sol, self.best_fit, logs

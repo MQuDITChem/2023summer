@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-fits = np.loadtxt('fits.csv', delimiter=',')
-plt.plot(fits)
-plt.savefig('fits.png')
+logs = np.loadtxt('ABC_log.csv', delimiter=',')
+plt.plot(logs)
+plt.savefig('ABC_logs.png')

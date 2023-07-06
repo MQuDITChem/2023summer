@@ -49,7 +49,7 @@ sol, val, fits = opt.run(200)
 
 
 numpy.savetxt('sol.csv', sol, delimiter=',')
-numpy.savetxt('fits.csv', fits, delimiter=',')
+numpy.savetxt('ABC_log.csv', fits, delimiter=',')
 
 print(sol)
 print(predictor.predict(sol.reshape(1,-1)))

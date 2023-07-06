@@ -28,6 +28,7 @@ dataset_test_y_scr = dataset[idx_rand[n_train:], n_feats + 2].reshape(-1,1)
 best_hyp_model_path ='./best_params/score/'
 
 model = joblib.load(os.path.join(best_hyp_model_path, f'best_model_xgb.pkl'))
+model.set_params(n_jobs=2)
 
 # train prediction model for score
 model = model.fit(dataset_train_x, dataset_train_y_scr.flatten())
